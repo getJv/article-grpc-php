@@ -1,0 +1,31 @@
+syntax = "proto3";
+
+option go_package = "getjv.github.com/protos";
+
+package helloworld;
+
+// The greeting service definition.
+service Greeter {
+  // Sends a greeting
+  rpc SayHello (HelloRequest) returns (HelloReply) {}
+
+  // Sends a stream of greetings from server to client
+  rpc StreamGreetings (HelloRequest) returns (stream HelloReply) {}
+
+  // Sends a stream of greetings from client to server
+  rpc EchoGreetings (stream HelloRequest) returns (HelloReply) {}
+
+  // Sends a stream of greetings from client to server
+  rpc OpenGreetings (stream HelloRequest) returns (stream HelloReply) {}
+
+}
+
+// The request message containing the user's name.
+message HelloRequest {
+  string name = 1;
+}
+
+// The response message containing the greetings
+message HelloReply {
+  string message = 1;
+}

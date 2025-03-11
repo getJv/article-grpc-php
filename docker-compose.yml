@@ -1,0 +1,22 @@
+services:
+  php:
+    container_name: php
+    image: getjv/grpc-php-base
+    volumes:
+      - ${PWD}:/var/www/html
+    extra_hosts:
+      - "host.docker.internal:172.17.0.1"
+
+  grpc_server:
+    container_name: grpc_server
+    image: getjv/go-grpc-server
+    ports:
+      - "50051:50051"
+
+
+
+
+
+
+
+

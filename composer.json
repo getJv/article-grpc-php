@@ -1,0 +1,13 @@
+{
+    "autoload": {
+        "psr-4": {
+            "Helloworld\\": "src/generated/Helloworld",
+            "GPBMetadata\\": "src/generated/GPBMetadata"
+        }
+    },
+    "require": {
+        "grpc/grpc": "^v1.39.0",
+        "google/protobuf": "^v3.12.2",
+      "ext-grpc": "*"
+    }
+}
